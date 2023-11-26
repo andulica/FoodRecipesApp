@@ -9,9 +9,9 @@
 <h3>All Recipes</h3>
 <table>
     <tr>
-        <th>Recipe ID</th>
-        <th>Recipe Title</th>
-        <th>Recipe Description</th>
+        <th>Product ID</th>
+        <th>Product Title</th>
+        <th>Product Quantity</th>
     </tr>
     <tr th:each="recipe:${recipes}">
         <td th:text="${recipe.id}">Number</td>
