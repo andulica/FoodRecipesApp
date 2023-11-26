@@ -1,23 +1,28 @@
 package com.example.foodrecipesapp.controllers;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
-    @RestController
-    @RequestMapping("api/v1/greetings")
-    public class GreetingController {
+
+@Controller
+public class GreetingController {
 
         @GetMapping("/")
-
-        public ResponseEntity<String> sayHello(){
-            return ResponseEntity.ok("Hello from out API");
-        }
-        @GetMapping("/say-good-bye")
-        public ResponseEntity<String> sayGoodBye(){
-            return ResponseEntity.ok("Good bye and see you later");
+        public String stock(Model model) {
+            return "view_stock";
         }
     }
+
+
+
+
 
